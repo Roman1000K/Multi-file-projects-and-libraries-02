@@ -1,28 +1,16 @@
 #include "Counter.h"
 #include<iostream>
 
+Counter::Counter(int initial) : num(initial) {}
 
-class Counter {
-private:
-    int num;
+int Counter::increase() {
+    return num++;
+}
 
-public:
-    Counter(int initial = 0) : num(initial)
-    {
-    }
+int Counter::decrease() {
+    return num--;
+}
 
-    int increase()
-    {
-        return num++;
-    }
-
-    int decrease()
-    {
-        return num--;
-    }
-
-    void currentValue()
-    {
-        std::cout << num << "\n";
-    }
-};
+void Counter::currentValue() {
+    std::cout << num << "\n";
+}

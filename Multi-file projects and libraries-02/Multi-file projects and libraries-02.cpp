@@ -1,15 +1,12 @@
 ﻿#include<iostream>
 #include<Windows.h> 
-#include "Counter.cpp"
-
-
-
+#include "Counter.h"
 
 int main() {
     SetConsoleCP(1251);
     SetConsoleOutputCP(1251);
 
-    std::cout << "Вы хотите указать начальное значение счётчика ? Введите да или нет : ";
+    std::cout << "Вывести текущее значение счётчика? Введите да или нет: ";
     std::string decision;
     std::cin >> decision;
 
@@ -19,7 +16,6 @@ int main() {
         std::cout << "Введите начальное значение счётчика: ";
         std::cin >> initial;
     }
-   
     Counter count(initial);
 
     while (true)
@@ -39,7 +35,7 @@ int main() {
             count.currentValue();
             break;
         default:
-            std::cout << "До свидания!";
+            std::cout << "Ошибка!";
             exit(0);
         }
     }
